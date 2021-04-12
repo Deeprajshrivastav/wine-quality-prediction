@@ -476,7 +476,7 @@ strong {
 
 @media (max-width: 710px) {
     .devloper1 {
-        height: 190px;
+        height: 280px;
         margin-top: 66px;
         border-bottom: 0px;
 
@@ -484,11 +484,11 @@ strong {
     }
 
     #protfolio img {
-        vertical-align: middle;
-        width: 210px;
-        height: 185px;
-        border-radius: 50%;
-        margin-top: 2px;
+    vertical-align: middle;
+    width: 250px;
+    height: 260px;
+    border-radius: 50%;
+    margin-top: 2px;
     }
 
     .devloper2 {
