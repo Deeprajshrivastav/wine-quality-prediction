@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine quality</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/CSS/sty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Wine</a>
+        <div id="toggle"></div>
+        <div id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="{{ url_for('predict')}}">Predictor</a></li>
+                <li><a href="#data">Data</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#protfolio">Developer</a></li>
+            </ul>
+        </div>
+    </header>
+    <section id="home">
+        <p>hello</p>
+        <h1 id="wine">DRINK WINE <br> SAVE WATER <br></h1>
+        <div class="box1">
+            <center>
+                <h1 style="letter-spacing: 2.4px">Wine quality prediction <br> using <br> machine learning</h1>
+                <hr>
+                <p>“The discovery of a wine is of greater moment than the discovery of a constellation. The universe is too full of stars.”<br>― Benjamin Franklin, circa 1700s</p>
+            </center>
+        </div>
+        <br>
+        <a href="#about" class="btn btn-primary">More info</a>
+    </section>
+    <section id="about">
+        <br><br>
+        <center>
+            <h1 style="letter-spacing: 3px">Introduction</h1>
+        </center>
+        <div class="about">
+            <p> I’ve picked up a number of hobbies and interests… including WINE. Recently, I’ve acquired a taste for wines, although I don’t really know what makes a good wine. Therefore, I decided to apply some machine learning models to figure out what makes a good quality wine!</p>
+            <hr>
+            <p>For this project, I used Kaggle’s <a href="https://www.kaggle.com/c/1056lab-wine-quality-prediction/data">Red Wine Quality dataset</a> to build various classification models to predict whether a particular red wine is “good quality” or not. Each wine in this dataset is given a “quality” score between 0 and 10. For the purpose of this project, I converted the output to a binary output where each wine is either “good quality” (a score of 6.5 or higher) or not (a score below 6.5). The quality of a wine is determined by 11 input variables: <strong>Fixed acidity, Volatile acidity, Citric acid, Residual sugar, Chlorides, Free sulfur dioxide, Total sulfur dioxide, Density, pH, Sulfates, Alcohol.</strong></p>
+        </div>
+    </section>
+    <section id="data">
+        <div class="s" style="color: white;">s</div>
+        <center><h2 style="font-weight: 500; letter-spacing: 1.4px;">Data information</h2></center>
+        <div class="inform">
+            <ol>
+                <li><strong>Fixed acidity: </strong>most acid involved with wine or fixed or nonvolatile.</li>
+                <li><strong>Volatile acidity: </strong>the amount of acetic acid in wine, which at too high of levels can lead to an unpleasant, vinegar taste.</li>
+                <li><strong>citric acid: </strong>found in small quantities, citric acid can add 'freshness' and flavor to wines.</li>
+                <li><strong>residual sugar: </strong>the amount of sugar remaining after fermentation stops, it's rare to find wines with less than 1 gram/liter and wines with greater than 45 grams/liter are considered sweet.</li>
+                <li><strong>chlorides: </strong>the amount of salt in the wine.</li>
+                <li><strong>free sulfur dioxide:: </strong>the free form of SO2 exists in equilibrium between molecular SO2 (as a dissolved gas) and bisulfite ion; it prevents microbial growth and the oxidation of wine.</li>
+                <li><strong>total sulfur dioxide: </strong> amount of free and bound forms of S02; in low concentrations, SO2 is mostly undetectable in wine, but at free SO2 concentrations over 50 ppm, SO2 becomes evident in the nose and taste of wine.</li>
+                <li><strong>density: </strong> the density of wine is close to that of water depending on the percent alcohol and sugar content.</li>
+                <li><strong>pH: </strong>describes how acidic or basic a wine is on a scale from 0 (very acidic) to 14 (very basic); most wines are between 3-4 on the pH scale.</li>
+                <li><strong>sulphates: </strong>a wine additive which can contribute to sulfur dioxide gas (S02) levels, wich acts as an antimicrobial and antioxidant.</li>
+                <li><strong>alcohol: </strong>the percent alcohol content of the wine.</li>
+                <li><strong>quality: </strong>output variable (0 or 1).</li>
+            </ol>
+        </div>
+    </section>
+    <!-- <section id="Team">Team</section> -->
+    <section id="contact">
+        <div class="hero-image">
+            <div class="tit">
+                <h1 style="opacity: 0; font-size: 0.1px;"> Contact us </h1>
+                <h3 style="font-size: 27px; font-size: 30px;  margin-top: 68px; letter-spacing: 1.5px; color: #ff2424;">Get in touch and let us know how we can help.</h3>
+                <p id="msg"></p>
+            </div>
+            <div class="cointainer">
+                <div class="box1">
+                    <div class="add">
+                        <img src="https://img.icons8.com/doodle/64/000000/address.png" />
+                        <p><br>Mit academy of enginnering <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alandi pune</p>
+                    </div>
+                    <div class="add">
+                        <img src="https://img.icons8.com/flat-round/64/000000/phone.png" />
+                        <p id="mob"><br>+917488259671</p>
+                    </div>
+                    <div class="add">
+                        <img src="https://img.icons8.com/fluent/48/000000/gmail--v2.png" />
+                        <p id="email" style="margin-left: 13px;"><br> deeprajshrivastava132@gmail.com </p>
+                    </div>
+                    <div class="add">
+                        <img src="https://img.icons8.com/fluent/48/000000/linkedin-2.png" />
+                        <a href="https://www.linkedin.com/in/deep-raj-0a4972182/"> <br>Deep Raj
+                        </a>
+                    </div>
+                </div>
+                <div class="box2">
+                    <p style="font-weight: bold; font-size: 20px; margin-bottom: 12px;">Send meassage</p>
+                    <form onsubmit="myfunction()">
+                        <div class="form-group">
+                            <label for="usr">Full name</label>
+                            <input type="text" class="form-control" id="usr" placeholder="Enter name" name="name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter email" name="email" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Type your message</label>
+                            <textarea class="form-control" rows="5" id="comment" required="required"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="protfolio">
+        <div class="inner">
+            <div class="devloper1">
+                <!-- <img src="1617894142828.jpg" alt=""> -->
+                <img src="static/img/1617894094287.jpg" alt="">
+            </div>
+            <div class="devloper2">
+                <center>
+                    <h2 style="letter-spacing: 1.8px; color: #0fd3dd">Developer</h2>
+                </center>
+                <p>Hi, I'm Deep raj, an engineering aspirants from india. Currently, I'm learning ML, DL, CV, NLP, Javascript. Now currentl I'm trying to do some self paced projects in data science and web devlopment like Breast cancer prediction, Face mask detection, student management system, wine quality prediction, etc.. I also know C, C++, Python, data structure, etc.. I'm always curious to learn something new in the field of Data Science and Web Devlopment. Beside's programing, I enjoy palying game and watching youtube. Below i have given my social media links. Happy to have new connections
+                    <br></p>
+            </div>
+        </div>
+        <div class="social">
+            <p style="margin-bottom: 0px; margin-top: 0px;">Developed with &#128151; by Deep raj</p>
+            <div class="icon">
+                <a href="https://github.com/Deeprajshrivastav"> <i class="fa fa-github" style="font-size:30px; color: black;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/deep-raj-0a4972182/"> <i class="fa fa-linkedin-square" style="font-size:30px; color: black;"></i>
+                </a>
+                <a href="https://twitter.com/DeepRaj34804742"> <i class="fa fa-twitter" style="font-size:30px; color: black;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+    const header = document.getElementById('header');
+    const toggle = document.getElementById('toggle');
+    const navbar = document.getElementById('navbar');
+    document.onclick = function(e) {
+        if (e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar') {
+            toggle.classList.remove('active');
+            navbar.classList.remove('active');
+        }
+    }
+    toggle.onclick = function() {
+        toggle.classList.toggle('active');
+        navbar.classList.toggle('active');
+    }
+    function myfunction() {
+        msg.innerHTML = "Thank you for contacting us";
+    }
+
+    </script>
+</body>
+
+</html>
