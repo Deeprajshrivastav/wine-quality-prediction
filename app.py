@@ -33,8 +33,13 @@ def result():
 
 
     data = pd.DataFrame(inputValue, columns=feature)
+    
+    try:    
+        x = model.predict(data)
+        
+    except Exception:
+        return redirect(url_for('predict'))
 
-    x = model.predict(data)
     if x[0] == 0:
         result = "Bad quality wine"
     else:
