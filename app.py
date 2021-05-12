@@ -21,7 +21,7 @@ def result():
     for i in request.form.values():
         inputValue.append(i)
         
-    if len(inputvalue) == 0:
+    if len(inputValue) == 0:
         return redirect(url_for('predict'))
     
     feature = []
