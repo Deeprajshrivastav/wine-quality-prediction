@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import pickle
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect
 
 
 model = pickle.load(open('winemodel.pkl', 'rb'))
@@ -20,7 +20,10 @@ def result():
     inputValue = []
     for i in request.form.values():
         inputValue.append(i)
-
+        
+    if len(inputvalue) == 0:
+        return redirect(url_for('predict'))
+    
     feature = []
 
     for j in request.form.keys():
